@@ -7,7 +7,7 @@ It provides a general framework for describing wave transformations from deep wa
 
 #### prerequisites
 
-The packages gfortran, cmake, ninja and perl must be installed first. They all included in [Strawberry Perl](https://strawberryperl.com) environment. After installing Strawberry Perl, check whether the mentioned packages were successfully installed on your computer, by opening a command prompt and running the following commands
+The packages `gfortran`, `CMake`, `ninja` and `perl` must be installed first. They all included in [Strawberry Perl](https://strawberryperl.com) environment. After installing the latest version of Strawberry Perl, check whether the mentioned packages were successfully installed on your computer, by opening a command prompt and running the following commands
 
 ```bat
 gfortran --version
