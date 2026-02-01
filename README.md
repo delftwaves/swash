@@ -14,11 +14,11 @@ It provides a general framework for describing wave transformations from deep wa
 ## installing SWASH
 
 The SWASH source code is written in Fortran90 and is available at the [Gitlab repository](https://gitlab.tudelft.nl/citg/wavemodels/swash).
-You can either install the pre-compied SWASH package directly on your computer or install using a Fortran90 compiler.
+You can either install the pre-compiled SWASH package directly on your computer or install using a Fortran90 compiler.
 
-#### installation methods
+### installation methods
 
-- pre-compiled packages
+#### 1. pre-compiled packages
 
 A pre-compiled binary distribution allows quick installation without requiring compilation.
 The SWASH 11.01 binaries are available for the following OS:
@@ -31,6 +31,6 @@ The SWASH 11.01 binaries are available for the following OS:
 Note that the tarbar files can be extracted in any folder and has no further installation steps.
 Do not forget to add the installed folder to your path.
 
-- installation from source
+#### 2. installation from source
 
     - [installing SWASH using gfortran on Windows 11](install_gfortran_win11.md)
