@@ -22,8 +22,6 @@ gfortran --version
 cmake --version
 ```
 
-Note: the `CMake` version should be at least 3.20 or higher.
-
 ```bat
 ninja --version
 ```
@@ -32,7 +30,9 @@ ninja --version
 perl --version
 ```
 
-Note: the `perl` version should be at least 5.0.0 or higher.
+If each of the above package reports a version number, then the installation was successful.
+
+Note: the `CMake` version must be at least 3.20 or higher and the `perl` version is 5 or higher.
 
 ### installation SWASH
 
