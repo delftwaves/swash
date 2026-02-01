@@ -76,7 +76,7 @@ sudo apt-get install build-essential cmake ninja-build gfortran
 
 The three Linux flavors (Debian, Ubuntu and Mint) have `perl` installed by default.
 
-####
+#### Verify installations
 
 Verify the required installations by checking their versions, as follows
 

@@ -31,7 +31,7 @@ The SWASH 11.01 binaries are available for the following OS platforms:
 Be aware that you may run into compatibility issues when another OS platform is installed on your machine.
 
 Note that the tarbar files can be extracted in any folder and has no further installation steps.
-Howeve, do not forget to add the installed folder to your path. Open a command line terminal and enter
+However, do not forget to add the installed folder to your path. Open a command line terminal and enter
 
 ```bash
 PATH = $PATH:/your/SWASH/folder/
