@@ -34,4 +34,4 @@ Do not forget to add the installed folder to your path.
 
 #### 2. installation from source
 
-    - [installing SWASH using gfortran on Windows 11](install_gfortran_win11.md)
+- [installing SWASH using gfortran on Windows 11](install_gfortran_win11.md)
