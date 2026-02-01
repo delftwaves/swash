@@ -45,19 +45,19 @@ git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git
 #### 2. configure SWASH
 
 ```bat
-make config
+gmake config
 ```
 
 #### 3. build SWASH
 
 ```bat
-make
+gmake
 ```
 
 #### 4. install SWASH
 
 ```bat
-make install
+gmake install
 ```
 SWASH is installed at folder `%LocalAppData%\Programs\wavemodels\swash` by default. To run SWASH, you need to make sure that this directory is added to your system's `PATH`.
 Open command prompt (press Windows key + R, type `cmd`, and hit Enter) and type
