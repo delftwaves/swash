@@ -11,7 +11,8 @@ The following packages must be installed first:
 
 These packages are all included in [Strawberry Perl](https://strawberryperl.com) package.
 
-After installing the latest version of Strawberry Perl, check whether the mentioned packages were successfully installed on your computer, by opening a command prompt and running the following commands
+After installing the latest version of Strawberry Perl, check whether the mentioned packages were successfully installed on your computer,
+by opening a command prompt (press Windows key + R, type `cmd`, and hit Enter) and running the following commands
 
 ```bat
 gfortran --version
@@ -58,7 +59,8 @@ make
 ```bat
 make install
 ```
-SWASH is installed at folder `%LocalAppData%\Programs\wavemodels\swash` by default. To run SWASH, you need to make sure that this directory is added to your system's `PATH`. Open command prompt and run
+SWASH is installed at folder `%LocalAppData%\Programs\wavemodels\swash` by default. To run SWASH, you need to make sure that this directory is added to your system's `PATH`.
+Open command prompt ((press Windows key + R, type `cmd`, and hit Enter)) and type
 
 ```bat
 setx path "%path%;%LocalAppData%\Programs\wavemodels\swash"
