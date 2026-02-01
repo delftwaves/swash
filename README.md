@@ -6,10 +6,10 @@ It provides a general framework for describing wave transformations from deep wa
 
 ## documentation
 
-[website](https://swash.sourceforge.io)
-[user manual](https://swash.sourceforge.io/online_doc/swashuse/swashuse.html)
-[scientific documentation](https://swash.sourceforge.io/online_doc/swashtech/swashtech.html)
-[repository](https://gitlab.tudelft.nl/citg/wavemodels/swash)
+- [website](https://swash.sourceforge.io)
+- [user manual](https://swash.sourceforge.io/online_doc/swashuse/swashuse.html)
+- [scientific documentation](https://swash.sourceforge.io/online_doc/swashtech/swashtech.html)
+- [repository](https://gitlab.tudelft.nl/citg/wavemodels/swash)
 
 ## instructions for installation
 
