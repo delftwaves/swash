@@ -21,7 +21,7 @@ You can either install the pre-compiled SWASH package directly on your computer 
 #### 1. pre-compiled binary packages
 
 A pre-compiled binary distribution allows quick installation without requiring compilation.
-The SWASH 11.01 binaries are available for the following OS:
+The SWASH 11.01 binaries are available for the following OS platforms:
 
 - [Windows 11](https://swash.sourceforge.io/download/zip/SWASH-11.01-Windows.exe)
 - [Linux Ubuntu 24.04 LTS](https://swash.sourceforge.io/download/zip/SWASH-11.01-Linux.tar.gz)

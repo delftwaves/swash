@@ -1,6 +1,6 @@
 ## installing SWASH using gfortran on Windows 11
 
-### dependencies
+### prerequisites
 
 The following packages must be installed first:
 
@@ -11,7 +11,7 @@ The following packages must be installed first:
 
 These packages are all included in [Strawberry Perl](https://strawberryperl.com) package.
 
-After installing the latest version of Strawberry Perl, check whether the mentioned packages were successfully installed on your computer,
+After installing the latest version of Strawberry Perl, check whether the required packages were successfully installed on your computer,
 by opening a command prompt (press Windows key + R, type `cmd`, and hit Enter) and running the following commands
 
 ```bat
