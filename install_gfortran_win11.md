@@ -60,7 +60,7 @@ make
 make install
 ```
 SWASH is installed at folder `%LocalAppData%\Programs\wavemodels\swash` by default. To run SWASH, you need to make sure that this directory is added to your system's `PATH`.
-Open command prompt ((press Windows key + R, type `cmd`, and hit Enter)) and type
+Open command prompt (press Windows key + R, type `cmd`, and hit Enter) and type
 
 ```bat
 setx path "%path%;%LocalAppData%\Programs\wavemodels\swash"
