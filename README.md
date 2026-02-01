@@ -14,20 +14,21 @@ It provides a general framework for describing wave transformations from deep wa
 ## installing SWASH
 
 The SWASH source code is written in Fortran90 and is available at the [Gitlab repository](https://gitlab.tudelft.nl/citg/wavemodels/swash).
-You can either install the pre-compiled SWASH package directly on your computer or install using a Fortran90 compiler.
+You can either install the pre-compiled SWASH package directly on your computer or configure, build and install using a Fortran90 compiler.
 
 ### installation methods
 
-#### 1. pre-compiled packages
+#### 1. pre-compiled binary packages
 
 A pre-compiled binary distribution allows quick installation without requiring compilation.
 The SWASH 11.01 binaries are available for the following OS:
 
 - [Windows 11](https://swash.sourceforge.io/download/zip/SWASH-11.01-Windows.exe)
-- [Linux](https://swash.sourceforge.io/download/zip/SWASH-11.01-Linux.tar.gz)
-- [macOS Intel](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS.tar.gz)
-- [macOS Silicon](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS-Silicon.tar.gz)
+- [Linux Ubuntu 24.04 LTS](https://swash.sourceforge.io/download/zip/SWASH-11.01-Linux.tar.gz)
+- [macOS Intel (Sonoma 14.01)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS.tar.gz)
+- [macOS Silicon (Sequoia 15.7.3)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS-Silicon.tar.gz)
 
+Be aware that you may run into compatibility issues when another OS version is installed on your machine.
 Note that the tarbar files can be extracted in any folder and has no further installation steps.
 Do not forget to add the installed folder to your path.
 
