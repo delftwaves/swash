@@ -134,4 +134,4 @@ Open the terminal and enter
 export PATH=$PATH:$HOME/wavemodels/swash
 ```
 
-You can check the new value of `$PATH` by echoing it: `echo $PATH`.
+You can check the new value of `PATH` by echoing it: `echo $PATH`.
