@@ -4,13 +4,6 @@
 SWASH is a general-purpose numerical tool for simulating unsteady, non-hydrostatic, free-surface, rotational flow and transport phenomena in coastal waters as driven by waves, tides, buoyancy and wind forces.
 It provides a general framework for describing wave transformations from deep water to a beach, port or harbour, complex changes to rapidly varied flows, and density driven flows in coastal seas, estuaries, lakes and rivers.
 
-## documentation
-
-- [website](https://swash.sourceforge.io)
-- [user manual](https://swash.sourceforge.io/online_doc/swashuse/swashuse.html)
-- [scientific documentation](https://swash.sourceforge.io/online_doc/swashtech/swashtech.html)
-- [repository](https://gitlab.tudelft.nl/citg/wavemodels/swash)
-
 ## installing SWASH
 
 The SWASH source code is written in Fortran90 and is available at the [Gitlab repository](https://gitlab.tudelft.nl/citg/wavemodels/swash).
@@ -31,15 +24,21 @@ The SWASH 11.01 binaries are available for the following OS platforms:
 Important notes:
 - These binaries are 64-bit only and, additionally, cannot be executed on multiple cores or threads.
 - Be aware that you may run into compatibility issues when another OS version (e.g., Windows 7, 32-bit Windows 10) or distro (e.g., Linux Mint, Rocky Linux) is installed on your machine.
-- Note that the tarbar files can be extracted in any folder (`tar xzf SWASH-11.01-<OS>.tar.gz` with `OS = Linux` or `OS = macOS`) and has no further installation steps.
+- Note that the tarbar files can be extracted in any folder (`tar xzf SWASH-11.01-<OS>.tar.gz` with `OS = Linux` or `macOS`) and has no further installation steps.
   However, do not forget to add the installed folder to your path. Open a command line terminal and enter
 
   ```bash
-  PATH = $PATH:/your/SWASH/folder/
-  export PATH
+  export PATH=$PATH:/your/SWASH/folder/
   ```
 
 #### 2. installation from source
 
 - [installing SWASH using gfortran on Windows 11](install_gfortran_win11.md)
 - [installing SWASH using gfortran on Linux](install_gfortran_linux.md)
+
+## documentation
+
+- [website](https://swash.sourceforge.io)
+- [user manual](https://swash.sourceforge.io/online_doc/swashuse/swashuse.html)
+- [scientific documentation](https://swash.sourceforge.io/online_doc/swashtech/swashtech.html)
+- [repository](https://gitlab.tudelft.nl/citg/wavemodels/swash)
