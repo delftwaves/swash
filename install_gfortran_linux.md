@@ -110,6 +110,8 @@ Note: the `CMake` version must be at least 3.20 or higher and the `perl` version
 git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git
 ```
 
+Paste this into a shell terminal.
+
 #### 2. configure SWASH
 
 ```bash
