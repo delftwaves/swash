@@ -131,6 +131,7 @@ SWASH is installed at folder `$HOME/wavemodels/swash` by default. To run SWASH, 
 Open the terminal and enter
 
 ```bash
-PATH=$PATH:$HOME/wavemodels/swash
-export PATH
+export PATH=$PATH:$HOME/wavemodels/swash
 ```
+
+You can check the new value of `$PATH` by echoing it: `echo $PATH`.
