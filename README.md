@@ -25,7 +25,7 @@ The SWASH 11.01 binaries are available for the following OS platforms:
 
 - [Windows 11](https://swash.sourceforge.io/download/zip/SWASH-11.01-Windows.exe)
 - [Linux Ubuntu 24.04 LTS](https://swash.sourceforge.io/download/zip/SWASH-11.01-Linux.tar.gz)
-- [macOS Intel (Sonoma 14.01)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS.tar.gz)
+- [macOS Intel (Monterey 12.7.6)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS.tar.gz)
 - [macOS Silicon (Sequoia 15.7.3)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS-Silicon.tar.gz)
 
 Be aware that you may run into compatibility issues when another OS platform is installed on your machine.
