@@ -84,8 +84,6 @@ Verify the required installations by checking their versions, as follows
 
 ```bash
 gfortran --version
-cmake --version
-perl --version
 ```
 
 ```bash
