@@ -74,7 +74,9 @@ followed by
 sudo apt-get install build-essential cmake ninja-build gfortran
 ```
 
-The three Linux flavors (Debian, Ubuntu and Mint) have `perl` installed by default.
+Note that the `build-essential` pacakage installs essential tools and libraries for compiling the source code, including `gcc` and `make`.
+
+The Linux flavors Debian, Ubuntu and Mint have `perl` installed by default.
 
 #### Verify installations
 
