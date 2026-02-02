@@ -39,6 +39,6 @@ Important notes:
 ## documentation
 
 - [website](https://swash.sourceforge.io)
-- [user manual](https://swash.sourceforge.io/online_doc/swashuse/swashuse.html)
-- [scientific documentation](https://swash.sourceforge.io/online_doc/swashtech/swashtech.html)
 - [repository](https://gitlab.tudelft.nl/citg/wavemodels/swash)
+- [user manual](https://swash.sourceforge.io/online_doc/swashuse/swashuse.html)
+- [scientific manual](https://swash.sourceforge.io/online_doc/swashtech/swashtech.html)
