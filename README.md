@@ -28,15 +28,16 @@ The SWASH 11.01 binaries are available for the following OS platforms:
 - [macOS Intel (Monterey 12.7.6)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS.tar.gz)
 - [macOS Silicon (Sequoia 15.7.3)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS-Silicon.tar.gz)
 
-Be aware that you may run into compatibility issues when another OS platform is installed on your machine.
+Important notes:
+- These binaries are 64-bit only and, additionally, cannot be executed on multiple cores or threads.
+- Be aware that you may run into compatibility issues when another OS version (e.g., Windows 7, 32-bit Windows 10) or distro (e.g., Linux Mint, Rocky Linux) is installed on your machine.
+- Note that the tarbar files can be extracted in any folder (`tar xzf SWASH-11.01-<OS>.tar.gz` with `OS = Linux` or `OS = macOS`) and has no further installation steps.
+  However, do not forget to add the installed folder to your path. Open a command line terminal and enter
 
-Note that the tarbar files can be extracted in any folder and has no further installation steps.
-However, do not forget to add the installed folder to your path. Open a command line terminal and enter
-
-```bash
-PATH = $PATH:/your/SWASH/folder/
-export PATH
-```
+  ```bash
+  PATH = $PATH:/your/SWASH/folder/
+  export PATH
+  ```
 
 #### 2. installation from source
 
