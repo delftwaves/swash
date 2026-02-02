@@ -39,6 +39,8 @@ Note: the version number of `CMake` must be at least 3.20 or higher and the `per
 
 #### 1.  download SWASH
 
+Open a command prompt, copy the command below, right-click in the prompt window to paste and press Enter.
+
 ```bat
 git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git
 ```
@@ -66,8 +68,7 @@ SWASH is installed at folder `%LocalAppData%\Programs\wavemodels\swash` by defau
 echo %LocalAppData%
 ```
 
-To run SWASH, you need to make sure that this directory is added to your system's `PATH`.
-Open command prompt (press Windows key + R, type `cmd`, and hit Enter) and type
+To run SWASH, you need to make sure that this directory is added to your system's `PATH`. Open command prompt and type
 
 ```bat
 setx path "%path%;%LocalAppData%\Programs\wavemodels\swash"
