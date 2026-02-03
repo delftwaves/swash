@@ -10,8 +10,15 @@ The following packages must be installed first:
 - perl
 
 These packages can be installed using system package managers such as Homebrew, MacPorts and Fink.
-Here, we will use [Homebrew](https://brew.sh).
-With the command `brew list` you can check the installed packages (or _formulae_) on your macOS.
+Here, we will use [Homebrew](https://brew.sh). You may install Homebrew first (visit its homepage, copy the installation command, paste it into your terminal, and press Enter)
+or update it: `brew update`.
+
+With the command `brew list` you can check the installed packages (or _formulae_) on your macOS. If desired, upgrade these packages first by typing in the terminal
+
+```bash
+brew upgrade
+```
+
 Below are the instructions for installing the required packages.
 
 First, install GCC (Gnu Compiler Collection) that includes `gfortran` by opening a terminal and typing the following command
