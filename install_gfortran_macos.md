@@ -1,0 +1,103 @@
+## installing SWASH using gfortran on macOS
+
+### prerequisites
+
+The following packages must be installed first:
+
+- gfortran
+- cmake
+- ninja
+- perl
+
+These packages can be installed using system package managers such as Homebrew, MacPorts and Fink.
+Here, we will use [Homebrew](https://brew.sh).
+With the command `brew list` you can check the installed packages (or _formulae_) on your macOS.
+Below are the instructions for installing the required packages.
+
+First, install GCC (Gnu Compiler Collection) that includes `gfortran` by opening a terminal and typing the following command
+
+```bash
+brew install gcc
+```
+
+To verify the installation, type `which gfortran` in the terminal. It should return a path where `gfortran` has been installed.
+On Apple Silicon, the compiler will be installed into the folder `/opt/homebrew/bin/`, while on an older Intel Mac, it will be
+installed in `/usr/local/bin`.
+
+Alternatively, type `gfortran --version` in the terminal. It should return a version number.
+
+Next, open a terminal and run the following command
+
+```bash
+brew install cmake
+```
+
+and then
+
+```
+brew install ninja
+```
+
+These commands will installed `CMake` and `ninja` on your machine.
+
+Usually, `perl` is pre-installed on macOS. Otherwise, you may install it by running the command `brew install perl`.
+
+#### Verify installations
+
+Verify the required installations by checking their versions, as follows
+
+```bash
+gfortran --version
+```
+
+```bash
+cmake --version
+```
+
+```bash
+ninja --version
+```
+
+```bash
+perl --version
+```
+
+If no error is reported, then the installation was successful.
+
+Note: the `CMake` version must be at least 3.20 or higher and the `perl` version is 5 or higher.
+
+### installation SWASH
+
+#### 1.  download SWASH
+
+```bash
+git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git
+```
+
+Paste this into a shell terminal.
+
+#### 2. configure SWASH
+
+```bash
+make config
+```
+
+#### 3. build SWASH
+
+```bash
+make
+```
+
+#### 4. install SWASH
+
+```bash
+make install
+```
+SWASH is installed at folder `$HOME/wavemodels/swash` by default. To run SWASH, you need to make sure that this directory is added to your system's `PATH`.
+Open the terminal and enter
+
+```bash
+export PATH=$PATH:$HOME/wavemodels/swash
+```
+
+You can check the new value of `PATH` by echoing it: `echo $PATH`. However, to set this permanently, you need to add it to your `~/.bash_profile` or `~/.bashrc` file.
