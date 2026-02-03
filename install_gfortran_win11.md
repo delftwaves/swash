@@ -10,7 +10,7 @@ The following packages must be installed first:
 - ninja
 - perl
 
-These packages are all included in [Strawberry Perl](https://strawberryperl.com) package.
+These packages are all included in the [Strawberry Perl](https://strawberryperl.com) package.
 
 After installing the latest release of Strawberry Perl, check whether the required packages were successfully installed on your computer,
 by opening a command prompt (press Windows key + R, type `cmd`, and hit Enter) and running the following commands
