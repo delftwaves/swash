@@ -72,11 +72,11 @@ Note: the `CMake` version must be at least 3.20 or higher and the `perl` version
 
 #### 1.  download SWASH
 
+Open a Terminal app, copy the command below to paste into the terminal, and press Enter.
+
 ```bash
 git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git
 ```
-
-Paste this into a shell terminal.
 
 #### 2. configure SWASH
 
