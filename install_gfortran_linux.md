@@ -149,9 +149,9 @@ You can check the new value of `PATH` by echoing it: `echo $PATH`. However, to s
 
 If desired, the build can be configured by passing one or more options below to `make config`.
 
-    fc=<compiler>   - the Fortran90 compiler to use [default is determined by `CMake`]
+    fc=<compiler>   - the Fortran90 compiler to use [default is determined by CMake]
     mpi=on          - enable build of SWASH with MPI [off by default]
-    prefix=<folder> - set the installation folder [`$HOME/wavemodels/swash` by default]
+    prefix=<folder> - set the installation folder [$HOME/wavemodels/swash by default]
 
 For example, the following command
 
