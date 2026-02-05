@@ -9,17 +9,24 @@
 SWASH is a general-purpose numerical tool for simulating unsteady, non-hydrostatic, free-surface, rotational flow and transport phenomena in coastal waters as driven by waves, tides, buoyancy and wind forces.
 It provides a general framework for describing wave transformations from deep water to a beach, port or harbour, complex changes to rapidly varied flows, and density driven flows in coastal seas, estuaries, lakes and rivers.
 
-## installing SWASH
+### table of contents
+* [1. installing SWASH](#1-installing-swash)
+  * [1.1 installation methods](#11-installation-methods)
+    * [1.1.1 pre-compiled binary packages](#111-pre-compiled-binary-packages)
+    * [1.1.2 installation from source](#112-installation-from-source)
+* [2. documentation](#2-documentation)
+
+## 1. installing SWASH
 
 The SWASH source code is written in Fortran90 and is available at the [Gitlab repository](https://gitlab.tudelft.nl/citg/wavemodels/swash).
 You can either install the pre-compiled SWASH package directly on your computer or configure, build and install SWASH using a Fortran90 compiler.
 
-### installation methods
+### 1.1 installation methods
 
-1. [pre-compiled binary packages](#pre-compiled-binary-packages)
-2. [installation from source](#installation-from-source)
+1. [pre-compiled binary packages](#111-pre-compiled-binary-packages)
+2. [installation from source](#112-installation-from-source)
 
-#### pre-compiled binary packages
+#### 1.1.1 pre-compiled binary packages
 
 A pre-compiled binary distribution allows quick installation without requiring compilation.
 The SWASH 11.01 binaries are available for the following OS platforms:
@@ -41,13 +48,13 @@ Important notes:
 
   Note that to set this new `PATH` permanently for different sessions, you need to add it to your `~/.bash_profile` or `~/.bashrc` file.
 
-#### installation from source
+#### 1.1.2 installation from source
 
 - [installing SWASH using gfortran on Windows 11](install_docs/install_gfortran_win11.md)
 - [installing SWASH using gfortran on Linux](install_docs/install_gfortran_linux.md)
 - [installing SWASH using gfortran on macOS](install_docs/install_gfortran_macos.md)
 
-## documentation
+## 2. documentation
 
 - [website](https://swash.sourceforge.io)
 - [repository](https://gitlab.tudelft.nl/citg/wavemodels/swash)
