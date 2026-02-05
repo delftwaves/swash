@@ -1,6 +1,6 @@
 # SWASH
 
-[![site](https://img.shields.io/badge/sourceforge%20-%20repo%20-%20blue?logo=sourceforge&color=blue)](https://swash.sourceforge.io)
+[![site](https://img.shields.io/badge/sourceforge%20-%20site%20-%20blue?logo=sourceforge&color=blue)](https://swash.sourceforge.io)
 [![repo](https://img.shields.io/badge/gitlab%20-%20repo%20-%20blue?logo=gitlab&color=blue)](https://gitlab.tudelft.nl/citg/wavemodels/swash)
 [![doi](https://img.shields.io/badge/DOI%20-%2010.1016%2Fj.coastaleng.2011.05.015%20-%20red?color=blue)](https://doi.org/10.1016/j.coastaleng.2011.05.015)
 [![license](https://img.shields.io/badge/license%20-%20GPL_v3%20-%20orange?color=orange)](/LICENSE)
