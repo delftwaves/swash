@@ -11,10 +11,10 @@ You can either install the pre-compiled SWASH package directly on your computer 
 
 ### installation methods
 
-1. [pre-compiled binary packages](#1.-pre-compiled-binary-packages)
-2. [installation from source](#2.-installation-from-source)
+1. [pre-compiled binary packages](#pre-compiled-binary-packages)
+2. [installation from source](#installation-from-source)
 
-#### 1. pre-compiled binary packages
+#### pre-compiled binary packages
 
 A pre-compiled binary distribution allows quick installation without requiring compilation.
 The SWASH 11.01 binaries are available for the following OS platforms:
@@ -36,7 +36,7 @@ Important notes:
 
   Note that to set this new `PATH` permanently for different sessions, you need to add it to your `~/.bash_profile` or `~/.bashrc` file.
 
-#### 2. installation from source
+#### installation from source
 
 - [installing SWASH using gfortran on Windows 11](install_gfortran_win11.md)
 - [installing SWASH using gfortran on Linux](install_gfortran_linux.md)
