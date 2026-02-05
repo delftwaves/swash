@@ -11,6 +11,9 @@ You can either install the pre-compiled SWASH package directly on your computer 
 
 ### installation methods
 
+1. [pre-compiled binary packages](#1.-pre-compiled-binary-packages)
+2. [installation from source](#2.-installation-from-source)
+
 #### 1. pre-compiled binary packages
 
 A pre-compiled binary distribution allows quick installation without requiring compilation.
