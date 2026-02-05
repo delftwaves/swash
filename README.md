@@ -1,5 +1,6 @@
 # SWASH
-[![License: GPL v3](https://img.shields.io/badge/License-GPL_v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPL_v3-brightgreen.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 SWASH is a general-purpose numerical tool for simulating unsteady, non-hydrostatic, free-surface, rotational flow and transport phenomena in coastal waters as driven by waves, tides, buoyancy and wind forces.
 It provides a general framework for describing wave transformations from deep water to a beach, port or harbour, complex changes to rapidly varied flows, and density driven flows in coastal seas, estuaries, lakes and rivers.
