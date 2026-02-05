@@ -22,7 +22,7 @@ It provides a general framework for describing wave transformations from deep wa
 The SWASH source code is written in Fortran90 and is available at the [Gitlab repository](https://gitlab.tudelft.nl/citg/wavemodels/swash).
 You can either install the pre-compiled SWASH package directly on your computer or configure, build and install SWASH using a Fortran90 compiler.
 
-### 1.1 installation methods
+### installation methods
 
 1. [pre-compiled binary packages](#pre-compiled-binary-packages)
 2. [installation from source](#installation-from-source)
