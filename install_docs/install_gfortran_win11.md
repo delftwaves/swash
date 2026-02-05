@@ -1,5 +1,7 @@
 ## installing SWASH using gfortran on Windows 11
 
+### table of contents
+
 - [prerequisites](#prerequisites)
 - [installation SWASH](#installation-swash)
 - [options for configuring SWASH](#options-for-configuring-swash)

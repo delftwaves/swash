@@ -6,6 +6,8 @@ The most common Linux distributions are
 
 with which the installation instructions below can be applied.
 
+### table of contents
+
 - [prerequisites](#prerequisites)
 - [installation SWASH](#installation-swash)
 - [options for configuring SWASH](#options-for-configuring-swash)
