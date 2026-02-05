@@ -1,5 +1,10 @@
 ## installing SWASH using gfortran on Windows 11
 
+- [prerequisites](#prerequisites)
+- [installation SWASH](#installation-swash)
+- [options for configuring SWASH](#options-for-configuring-swash)
+- [clean up](#clean-up)
+
 ### prerequisites
 
 The following packages must be installed first:
@@ -75,3 +80,35 @@ setx path "%path%;%LocalAppData%\Programs\wavemodels\swash"
 ```
 
 Note to check the new value of `%path%` by echoing, first close the command prompt terminal and then open again.
+
+### options for configuring SWASH
+
+If desired, the build can be configured by passing one or more options below to `gmake config`.
+
+    fc=<compiler>   - the Fortran90 compiler to use [default is determined by `CMake`]
+    mpi=on          - enable build of SWASH with MPI [off by default]
+    prefix=<folder> - set the installation folder [`%LocalAppData%\Programs\wavemodels\swash` by default]
+
+For example, the following command
+
+```bat
+gmake config mpi=on
+```
+
+will configure SWASH to be built that supports parallel computing using the MPI paradigm. Note that this only works if the MPI libraries are available on your Windows machine.
+(This will be checked by `CMake` after typing the above command.)
+For installation of MPI on Windows 11, visit the website of [Microsoft MPI](https://www.microsoft.com/en-us/download/details.aspx?id=105289).
+
+### clean up
+
+To remove the build directory and all files that have been created after running `gmake` or `gmake build`, type the following command
+
+```bat
+gmake clobber
+```
+
+If you want to remove all files installed by `gmake install`, then run
+
+```bat
+gmake uninstall
+```
