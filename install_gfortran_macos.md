@@ -47,7 +47,7 @@ brew install ninja
 
 These commands will installed `CMake` and `ninja` on your machine.
 
-Usually, `perl` is pre-installed on macOS. Otherwise, you may install it by running the command `brew install perl`.
+Usually, `perl` is pre-installed on macOS. This can be checked with the command `perl -v`. Otherwise, you may install it by running the command `brew install perl`.
 
 #### Verify installations
 
