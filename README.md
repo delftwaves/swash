@@ -39,9 +39,9 @@ Important notes:
 
 #### installation from source
 
-- [installing SWASH using gfortran on Windows 11](install_gfortran_win11.md)
-- [installing SWASH using gfortran on Linux](install_gfortran_linux.md)
-- [installing SWASH using gfortran on macOS](install_gfortran_macos.md)
+- [installing SWASH using gfortran on Windows 11](install_docs/install_gfortran_win11.md)
+- [installing SWASH using gfortran on Linux](install_docs/install_gfortran_linux.md)
+- [installing SWASH using gfortran on macOS](install_docs/install_gfortran_macos.md)
 
 ## documentation
 
