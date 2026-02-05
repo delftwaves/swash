@@ -1,5 +1,10 @@
 ## installing SWASH using gfortran on macOS
 
+- [prerequisites](#prerequisites)
+- [installation SWASH](#installation-swash)
+- [options for configuring SWASH](#options-for-configuring-swash)
+- [clean up](#clean-up)
+
 ### prerequisites
 
 The following packages must be installed first:
@@ -103,3 +108,34 @@ export PATH=$PATH:$HOME/wavemodels/swash
 ```
 
 You can check the new value of `PATH` by echoing it: `echo $PATH`. However, to set this permanently, you need to add it to your `~/.bash_profile` or `~/.bashrc` file.
+
+### options for configuring SWASH
+
+If desired, the build can be configured by passing one or more options below to `make config`.
+
+    fc=<compiler>   - the Fortran90 compiler to use [default is determined by `CMake`]
+    mpi=on          - enable build of SWASH with MPI [off by default]
+    prefix=<folder> - set the installation folder [`$HOME/wavemodels/swash` by default]
+
+For example, the following command
+
+```bash
+make config mpi=on
+```
+
+will configure SWASH to be built that supports parallel computing using the MPI paradigm. Note that this only works if the MPI libraries are available on your machine.
+This will be checked by `CMake` after typing the above command.
+
+### clean up
+
+To remove the build directory and all files that have been created after running `make` or `make build`, type the following command
+
+```bash
+make clobber
+```
+
+If you want to remove all files installed by `make install`, then run
+
+```bash
+make uninstall
+```
