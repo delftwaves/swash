@@ -1,6 +1,6 @@
 # SWASH
 
-[![release](https://img.shields.io/badge/release%20-%2011.01%20-%20brightgreen?color=brightgreen)]()
+[![release](https://img.shields.io/badge/release%20-%20v11.01%20-%20brightgreen?color=brightgreen)]()
 [![site](https://img.shields.io/badge/sourceforge%20-%20site%20-%20blue?logo=sourceforge&color=blue)](https://swash.sourceforge.io)
 [![repo](https://img.shields.io/badge/gitlab%20-%20repo%20-%20blue?logo=gitlab&color=blue)](https://gitlab.tudelft.nl/citg/wavemodels/swash)
 [![doi](https://img.shields.io/badge/DOI%20-%2010.1016%2Fj.coastaleng.2011.05.015%20-%20red?color=blue)](https://doi.org/10.1016/j.coastaleng.2011.05.015)
