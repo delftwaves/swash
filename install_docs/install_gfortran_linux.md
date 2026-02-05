@@ -109,7 +109,7 @@ perl --version
 
 If no error is reported, then the installation was successful.
 
-Note: the `CMake` version must be at least 3.20 or higher and the `perl` version is 5 or higher.
+Note: the `CMake` version must be at least 3.20 or newer and the `perl` version is 5 or higher.
 
 ### installation SWASH
 
