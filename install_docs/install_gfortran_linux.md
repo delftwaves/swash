@@ -11,6 +11,7 @@ with which the installation instructions below can be applied.
 - [prerequisites](#prerequisites)
 - [installation SWASH](#installation-swash)
 - [options for configuring SWASH](#options-for-configuring-swash)
+- [building with MPI support](#building-with-mpi-support)
 - [clean up](#clean-up)
 
 ### prerequisites
