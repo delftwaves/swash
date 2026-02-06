@@ -103,14 +103,14 @@ For installation of MPI on Windows 11, visit the website of [Microsoft MPI](http
 
 ### clean up
 
-To remove the build directory and all files that have been created after running `gmake` or `gmake build`, type the following command
-
-```bat
-gmake clobber
-```
-
-If you want to remove all files installed by `gmake install`, then run
+To remove all files installed by `gmake install`, type the following command
 
 ```bat
 gmake uninstall
+```
+
+If you want to remove the build directory and all files that have been created after running `gmake` or `gmake build`, then run
+
+```bat
+gmake clobber
 ```

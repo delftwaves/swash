@@ -166,14 +166,14 @@ This will be checked by `CMake` after typing the above command.
 
 ### clean up
 
-To remove the build directory and all files that have been created after running `make` or `make build`, type the following command
-
-```bash
-make clobber
-```
-
-If you want to remove all files installed by `make install`, then run
+To remove all files installed by `make install`, type the following command
 
 ```bash
 make uninstall
+```
+
+If you want to remove the build directory and all files that have been created after running `make` or `make build`, then run
+
+```bash
+make clobber
 ```
