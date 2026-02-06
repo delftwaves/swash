@@ -158,11 +158,64 @@ If desired, the build can be configured by passing one or more options below to 
 For example, the following command
 
 ```bash
-make config mpi=on
+make config fc=gfortran prefix=/usr/local/swash
 ```
 
-will configure SWASH to be built that supports parallel computing using the MPI paradigm. Note that this only works if the MPI libraries are available on your machine.
-This will be checked by `CMake` after typing the above command.
+will configure SWASH to be built using `gfortran` and then install it at `/usr/local/swash`.
+
+### building with MPI support
+
+The SWASH source code also supports memory-distributed parallelism for high performance computing applications.
+A message passing approach is employed based on the Message Passing Interface (MPI) standard that enables communication between independent processors.
+
+Popular implementations are [Open MPI](https://www.open-mpi.org) and [MPICH](https://www.mpich.org).
+The first one is typically offered by the package managers of Linux and macOS and can be combined with GCC such as gfortran.
+
+Before installing Open MPI, make sure that your system is up to date and that GCC has been installed, see [prerequisites](#prerequisites).
+
+To install Open MPI on a RPM-based Linux (e.g., Rocky Linux), run
+
+```bash
+dnf install openmpi openmpi-devel
+```
+
+To install Open MPI on a Debian-based Linux (e.g., Ubuntu), run
+
+```bash
+sudo apt install openmpi-bin libopenmpi-dev
+```
+
+To verify whether the installation was successful, run the following command
+
+```bash
+ompi_info --version
+```
+
+or
+
+```bash
+mpirun --version
+```
+
+Once Open MPI is operational, we proceed to build SWASH. First, we configure SWASH to be built with support for Open MPI, as follows
+
+```bash
+make config fc=mpifort mpi=on
+```
+
+The actual building is done by typing
+
+```bash
+make
+```
+
+Finally, to install SWASH, run the following command
+
+```bash
+make install
+```
+
+SWASH is ready for use.
 
 ### clean up
 
