@@ -5,6 +5,7 @@
 - [prerequisites](#prerequisites)
 - [installation SWASH](#installation-swash)
 - [options for configuring SWASH](#options-for-configuring-swash)
+- [building with MPI support](#building-with-mpi-support)
 - [clean up](#clean-up)
 
 ### prerequisites
@@ -128,16 +129,63 @@ make config mpi=on
 will configure SWASH to be built that supports parallel computing using the MPI paradigm. Note that this only works if the MPI libraries are available on your machine.
 This will be checked by `CMake` after typing the above command.
 
-### clean up
+### building with MPI support
 
-To remove the build directory and all files that have been created after running `make` or `make build`, type the following command
+The SWASH source code also supports memory-distributed parallelism for high-performance computing applications.
+A message passing approach is employed based on the Message Passing Interface (MPI) standard that enables communication between independent processors.
+
+Popular implementations are [Open MPI](https://www.open-mpi.org) and [MPICH](https://www.mpich.org).
+The first one is typically offered by the package managers of Linux and macOS.
+
+The easiest way to install Open MPI is by using the Homebrew package manager, as follows
 
 ```bash
-make clobber
+brew install openmpi
 ```
 
-If you want to remove all files installed by `make install`, then run
+To verify whether the installation was successful, run the following command
+
+```bash
+ompi_info --version
+```
+
+or
+
+```bash
+mpirun --version
+```
+
+Once Open MPI is operational, we proceed to build SWASH.
+The following configuration options must be pass to `make config`: `fc` and `mpi`, as follows
+
+```bash
+make config fc=mpifort mpi=on
+```
+
+This command will configure SWASH to be built with support for Open MPI. The actual building is done by typing
+
+```bash
+make
+```
+
+Finally, to install SWASH, run the following command
+
+```bash
+make install
+```
+
+SWASH is ready for use.
+
+### clean up
+
+To remove all files installed by `make install`, type the following command
 
 ```bash
 make uninstall
+```
+
+If you want to remove the build directory and all files that have been created after running `make` or `make build`, then run
+
+```bash
+make clobber
 ```
