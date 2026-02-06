@@ -44,6 +44,8 @@ Note: the version number of `CMake` must be at least 3.20 or newer and the `perl
 
 ### installation SWASH
 
+Once the prerequisites are taken care of, installing SWASH on your machine is a four-step process.
+
 #### 1.  download SWASH
 
 Open a command prompt, copy the command below, right-click in the prompt window to paste and press Enter.
