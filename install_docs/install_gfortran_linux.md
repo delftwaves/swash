@@ -9,6 +9,8 @@ with which the installation instructions below can be applied.
 ### table of contents
 
 - [prerequisites](#prerequisites)
+  - [RPM-based Linux distributions](#rpm-based-linux-distributions)
+  - [Debian-based Linux distributions](#debian-based-linux-distributions)
 - [installation SWASH](#installation-swash)
 - [options for configuring SWASH](#options-for-configuring-swash)
 - [building with MPI support](#building-with-mpi-support)
