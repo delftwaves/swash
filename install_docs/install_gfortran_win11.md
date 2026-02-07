@@ -96,12 +96,10 @@ If desired, the build can be configured by passing one or more options below to 
 For example, the following command
 
 ```bat
-gmake config mpi=on
+gmake config prefix=C:\Program Files\swash
 ```
 
-will configure SWASH to be built that supports parallel computing using the MPI paradigm. Note that this only works if the MPI libraries are available on your Windows machine.
-(This will be checked by `CMake` after typing the above command.)
-For installation of MPI on Windows 11, visit the website of [Microsoft MPI](https://www.microsoft.com/en-us/download/details.aspx?id=105289).
+will configure SWASH to be installed at `C:\Program Files\swash`.
 
 ### clean up
 

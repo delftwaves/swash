@@ -176,7 +176,7 @@ Finally, to install SWASH, run the following command
 make install
 ```
 
-SWASH is ready for use.
+SWASH is now ready for high performance computing.
 
 ### clean up
 
