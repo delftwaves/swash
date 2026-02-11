@@ -121,7 +121,7 @@ Once the prerequisites are taken care of, installing SWASH on your machine is a 
 #### 1.  download SWASH
 
 ```bash
-git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git
+git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git && cd swash
 ```
 
 Paste this into a shell terminal.

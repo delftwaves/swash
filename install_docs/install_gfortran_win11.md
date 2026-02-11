@@ -51,7 +51,7 @@ Once the prerequisites are taken care of, installing SWASH on your machine is a 
 Open a command prompt, copy the command below, right-click in the prompt window to paste and press Enter.
 
 ```bat
-git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git
+git clone https://gitlab.tudelft.nl/citg/wavemodels/swash.git && cd swash
 ```
 
 #### 2. configure SWASH
