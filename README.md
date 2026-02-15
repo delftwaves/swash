@@ -13,6 +13,7 @@ It provides a general framework for describing wave transformations from deep wa
 
 - [installation](#installation)
   - [installation methods](#installation-methods)
+    - [docker container](#docker-container)
     - [pre-compiled binary packages](#pre-compiled-binary-packages)
     - [installation from source](#installation-from-source)
 - [usage](#usage)
@@ -22,25 +23,56 @@ It provides a general framework for describing wave transformations from deep wa
 
 The SWASH source code is written in Fortran90 and is available at the [Gitlab repository](https://gitlab.tudelft.nl/citg/wavemodels/swash).
 You can either install the pre-compiled SWASH package directly on your computer or configure, build and install SWASH using a Fortran90 compiler.
+However, especially for new users, you can also run SWASH immediately using a docker container.
 
 ### installation methods
 
-1. [pre-compiled binary packages](#pre-compiled-binary-packages)
-2. [installation from source](#installation-from-source)
+1. [docker container](#docker-container)
+2. [pre-compiled binary packages](#pre-compiled-binary-packages)
+3. [installation from source](#installation-from-source)
+
+#### docker container
+
+A docker container bundles an application (here SWASH) with all its dependencies, including libraries, configuration files, and a lightweight OS kernel (usually Linux Ubuntu)
+into a single package, and can be used to run the application directly on any OS platform.
+However, you do need the [Docker Engine](https://docs.docker.com/engine/install/) to run the container.
+This engine is available for Windows, Linux, and macOS via [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+After installing Docker Desktop, you can test SWASH and check if it runs properly.
+Open a terminal, copy and paste the following command into the terminal and press Enter:
+
+```bash
+docker run --name myfirstswash delftwaves/check_swash
+```
+
+This `docker run` command first pulls the image `delftwaves/check_swash` from the Docker Hub, which might take a few moments.
+Next, it creates a new container based on this image called `myfirstswash`, and then the SWASH executable within this container is run after which the output will be created.
+
+If the installation was successful, you should see a message saying that SWASH ran successfully. Additionally, you can retrieve the SWASH output file from the running
+container `myfirstswash`:
+
+```bash
+docker cp myfirstswash:/home/swash/a11stw01.tbl .
+```
+
+To run your own SWASH application, download the official [SWASH docker image](https://hub.docker.com/r/delftwaves/swash) from the Docker Hub repository.
+Like the SWASH source code, this image is distributed under [GNU GPL v3 license](https://gitlab.tudelft.nl/citg/wavemodels/swash/-/blob/main/LICENSE).
 
 #### pre-compiled binary packages
 
 A pre-compiled binary distribution allows quick installation without requiring compilation.
-The SWASH 11.01 binaries are available for the following OS platforms:
+The SWASH 11.01 binaries are available for the following OS/ARCH:
 
-- [Windows 11](https://swash.sourceforge.io/download/zip/SWASH-11.01-Windows.exe)
-- [Linux Ubuntu 24.04 LTS](https://swash.sourceforge.io/download/zip/SWASH-11.01-Linux.tar.gz)
-- [macOS Intel (Monterey 12.7.6)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS.tar.gz)
-- [macOS Silicon (Sequoia 15.7.3)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS-Silicon.tar.gz)
+- [Windows 11 (AMD64)](https://swash.sourceforge.io/download/zip/SWASH-11.01-Windows.exe)
+- [Linux Ubuntu 24.04 LTS (AMD64)](https://swash.sourceforge.io/download/zip/SWASH-11.01-Linux.tar.gz)
+- [macOS Monterey 12.7.6 (AMD64)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS.tar.gz)
+- [macOS Sequoia 15.7.3 (ARM64)](https://swash.sourceforge.io/download/zip/SWASH-11.01-macOS-Silicon.tar.gz)
 
 Important notes:
 - These binaries are 64-bit only and, additionally, cannot be executed on multiple cores or threads.
-- Be aware that you may run into compatibility issues when another OS version (e.g., Windows 7, 32-bit Windows 10) or distro (e.g., Linux Mint, Rocky Linux) is installed on your machine.
+- Be aware that you may run into compatibility issues when another OS version (e.g., Windows 7, 32-bit Windows 10) or
+  distro (e.g., Linux Mint, Rocky Linux) is installed on your machine, or another CPU architecture (e.g., i386/i686, x86_64, AMD64, ARMv7, ARM64).
+  If this is the case, then [Docker](#docker-container) might be a good alternative for you.
 - Note that the tarbar files can be extracted in any folder (`tar xzf SWASH-11.01-<OS>.tar.gz` with `OS = Linux` or `macOS`) and has no further installation steps.
   However, do not forget to add the installed folder to your path. Open a command line terminal and enter
 
