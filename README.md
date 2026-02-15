@@ -45,7 +45,7 @@ Open a terminal, copy and paste the following command into the terminal and pres
 docker run --name myfirstswash delftwaves/check_swash
 ```
 
-This `docker run` command first pulls the image `delftwaves/check_swash` from the Docker Hub, which might take a few moments.
+This `docker run` command first pulls the image `delftwaves/check_swash` from the [Docker Hub](https://hub.docker.com), which might take a few moments.
 Next, it creates a new container based on this image called `myfirstswash`, and then the SWASH executable within this container is run after which the output will be created.
 
 If the installation was successful, you should see a message saying that SWASH ran successfully. Additionally, you can retrieve the SWASH output file from the running
