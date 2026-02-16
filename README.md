@@ -42,18 +42,12 @@ After installing Docker Desktop, you can test SWASH and check if it runs properl
 Open a terminal, copy and paste the following command into the terminal and press Enter:
 
 ```bash
-docker run --name myfirstswash delftwaves/check_swash
+docker run delftwaves/swash
 ```
 
-This `docker run` command first pulls the image `delftwaves/check_swash` from the [Docker Hub](https://hub.docker.com), which might take a few moments.
-Next, it creates a new container based on this image called `myfirstswash`, and then the SWASH executable within this container is run after which the output will be created.
-
-If the installation was successful, you should see a message saying that SWASH ran successfully. Additionally, you can retrieve the SWASH output file from the running
-container `myfirstswash`:
-
-```bash
-docker cp myfirstswash:/home/swash/a11stw01.tbl .
-```
+This `docker run` command first pulls the image `delftwaves/swash` from the [Docker Hub](https://hub.docker.com), which might take a few moments.
+Next, it creates a new container based on this image and then the SWASH executable within this container will be run.
+If the installation was successful, you should see a message saying that SWASH ran successfully.
 
 To run your own SWASH application, download the official [SWASH docker image](https://hub.docker.com/r/delftwaves/swash) from the Docker Hub repository.
 Like the SWASH source code, this image is distributed under [GNU GPL v3 license](https://gitlab.tudelft.nl/citg/wavemodels/swash/-/blob/main/LICENSE).
@@ -73,7 +67,7 @@ Important notes:
 - Be aware that you may run into compatibility issues when another OS version (e.g., Windows 7, 32-bit Windows 10) or
   distro (e.g., Linux Mint, Rocky Linux) is installed on your machine, or another CPU architecture (e.g., i386/i686, x86_64, AMD64, ARMv7, ARM64).
   If this is the case, then [Docker](#docker-container) might be a good alternative for you.
-- Note that the tarbar files can be extracted in any folder (`tar xzf SWASH-11.01-<OS>.tar.gz` with `OS = Linux` or `macOS`) and has no further installation steps.
+- The tarbar files can be extracted in any folder (`tar xzf SWASH-11.01-<OS>.tar.gz` with `OS = Linux` or `macOS`) and has no further installation steps.
   However, do not forget to add the installed folder to your path. Open a command line terminal and enter
 
   ```bash
@@ -81,6 +75,12 @@ Important notes:
   ```
 
   Note that to set this new `PATH` permanently for different sessions, you need to add it to your `~/.bash_profile` or `~/.bashrc` file.
+- The macOS executables require the GCC (GNU Compiler Collection) package. Open a terminal (Applications > Utilities and search for the Terminal app),
+  copy and paste the following command, and hit Enter:
+
+  ```bash
+  brew install gcc
+  ```
 
 #### installation from source
 
