@@ -35,7 +35,7 @@ The default package manager is `dnf`. First, update the system
 sudo dnf update
 ```
 
-Next, run the following command to install GCC (Gnu Compiler Collection) on the system
+Next, run the following command to install GCC (GNU Compiler Collection) on the system
 
 ```bash
 sudo dnf install gcc
