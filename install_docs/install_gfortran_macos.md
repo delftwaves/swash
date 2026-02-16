@@ -24,7 +24,7 @@ or update it: `brew update`.
 With the command `brew list` you can check the installed packages (or _formulae_) on your macOS. If desired, upgrade these packages first by typing `brew upgrade`.
 Below are the instructions for installing the required packages.
 
-First, install GCC (Gnu Compiler Collection) that includes `gfortran` by opening a terminal (Applications > Utilities and search for the Terminal app) and typing the following command
+First, install GCC (GNU Compiler Collection) that includes `gfortran` by opening a terminal (Applications > Utilities and search for the Terminal app) and typing the following command
 
 ```bash
 brew install gcc
