@@ -16,14 +16,14 @@ It provides a general framework for describing wave transformations from deep wa
     - [docker container](#docker-container)
     - [pre-compiled binary packages](#pre-compiled-binary-packages)
     - [installation from source](#installation-from-source)
-- [usage](#usage)
+- [run instructions](#run-instructions)
 - [documentation](#documentation)
 
 ## installation
 
 The SWASH source code is written in Fortran90 and is available at the [Gitlab repository](https://gitlab.tudelft.nl/citg/wavemodels/swash).
 You can either install the pre-compiled SWASH package directly on your computer or configure, build and install SWASH using a Fortran90 compiler.
-However, especially for new users, you can also run SWASH immediately using a docker container.
+Alternatively, you can run SWASH immediately using a docker container. Especially users new to SWASH might find this very helpful.
 
 ### installation methods
 
@@ -34,9 +34,8 @@ However, especially for new users, you can also run SWASH immediately using a do
 #### docker container
 
 A docker container bundles an application (here SWASH) with all its dependencies, including libraries, configuration files, and a lightweight OS kernel (usually Linux Ubuntu)
-into a single package, and can be used to run the application directly on any OS platform.
-However, you do need the [Docker Engine](https://docs.docker.com/engine/install/) to run the container.
-This engine is available for Windows, Linux, and macOS via [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+into a single package, and can be used to run the application directly on any OS platform. To run the container, one needs to install the [Docker Engine](https://docs.docker.com/engine/install/)
+in their machine. This engine is available for Windows, Linux, and macOS via [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
 After installing Docker Desktop, you can test SWASH and check if it runs properly.
 Open a terminal, copy and paste the following command into the terminal and press Enter:
@@ -88,7 +87,46 @@ Important notes:
 - [installing SWASH using gfortran on Linux](install_docs/install_gfortran_linux.md)
 - [installing SWASH using gfortran on macOS](install_docs/install_gfortran_macos.md)
 
-## usage
+## run instructions
+
+The provided run utilities (`swashrun` and `swashrun.bat`) enable the user to properly and easily run SWASH both serial as well as parallel. 
+
+#### local copy of SWASH
+
+For Windows users, open a terminal (hit the Window key + R, typ `cmd` and click OK), copy and paste the following command, and hit Enter:
+
+```bat
+swashrun <SWASH-command-file-without-extension> <nprocs>
+```
+
+while for Linux and Mac users, type in an opened terminal the following command:
+
+```bash
+swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
+```
+
+Here, `SWASH-command-file-without-extension` is the name of your command file without extension (assuming it is `sws`) and `nprocs` indicates how many
+processors need to be launched for a parallel MPI run. By default, `nprocs = 1`.
+
+#### from docker image
+
+The user can either choose between the docker in non-interactive mode or interactive mode (option `-it`), as follows
+
+```bash
+docker run --rm -v .:/home/swash delftwaves/swash swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
+```
+
+which will run SWASH non-interactively or
+
+```bash
+docker run -it --rm -v .:/home/swash delftwaves/swash bash
+```
+
+Once the interactive bash shell is started in the container, the user can access the commands available from Linux Ubuntu (e.g., `ls`, `find`, `which`) and SWASH (e.g., `swashrun`, `swash.exe`).
+
+Notes:
+- The option `-v .:/home/swash` ensures that the SWASH output files and the PRINT file created in the directory `/home/swash` of the docker container will store in your local current directory.
+- The option `--rm` removes the exited container from your machine after terminating SWASH. (Check by invoking the command `docker ps -a`.)
 
 ## documentation
 
