@@ -19,7 +19,8 @@ It provides a general framework for describing wave transformations from deep wa
 - [run instructions](#run-instructions)
   - [usage of built SWASH](#usage-of-built-swash)
     - [local copy of SWASH](#local-copy-of-swash)
-    - [from docker image](#from-docker-image)
+    - [from Docker image](#from-docker-image)
+    - [use with Singularity](#use-with-singularity)
 - [documentation](#documentation)
 
 ## installation
@@ -92,17 +93,22 @@ Important notes:
 
 ## run instructions
 
-The provided run utilities (`swashrun` and `swashrun.bat`) enable the user to properly and easily run SWASH both serial as well as parallel.
-Depending on your choice of [installed SWASH](#installation-methods), you can run the simulations via your own built SWASH or via Docker.
+SWASH can be run on various architectures, including laptops, HPC machines and cloud-based clusters,
+Depending on your choice of [installed SWASH](#installation-methods), you can run the simulations locally on an OS platform (Windows, Linux or Mac)
+via your own built SWASH or via Docker. Additionally, you can run SWASH on HPC in the cloud using [Singularity](https://sylabs.io/singularity/) (or Apptainer)
+with the [SWASH docker image](https://hub.docker.com/r/delftwaves/swash).
 
 ### usage of built SWASH
 
 1. [local copy of SWASH](#local-copy-of-swash)
-2. [from docker image](#from-docker-image)
+2. [from Docker image](#from-docker-image)
+3. [use with Singularity](#use-with-singularity)
 
 #### local copy of SWASH
 
-For Windows users, open a terminal (hit the Window key + R, typ `cmd` and click OK), copy and paste the following command, and hit Enter:
+The provided run scripts (`swashrun` and `swashrun.bat`) enable the user to properly and easily run SWASH both serial as well as parallel.
+For Windows users, open a terminal (hit the Window key + R, type `cmd` and click OK), navigate to the folder containing your SWASH input files
+(command file, grid, bathymetry, etc.), then copy and paste the following command, and hit Enter:
 
 ```bat
 swashrun <SWASH-command-file-without-extension> <nprocs>
@@ -114,18 +120,18 @@ while for Linux and Mac users, type in an opened terminal the following command:
 swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
 ```
 
-Here, `SWASH-command-file-without-extension` is the name of your command file without extension (assuming it is `sws`) and `nprocs` indicates how many
+Here, `<SWASH-command-file-without-extension>` is the name of your command file without extension (assuming it is `sws`) and `<nprocs>` indicates how many
 processors need to be launched for a parallel MPI run. By default, `nprocs = 1`.
 
-#### from docker image
+#### from Docker image
 
-The user can either choose between the docker in non-interactive mode or interactive mode (option `-it`), as follows
+The user can either choose between running SWASH directly using docker or the docker in interactive mode (option `-it`), as follows
 
 ```bash
 docker run --rm -v .:/home/swash delftwaves/swash swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
 ```
 
-which will run SWASH non-interactively or
+or
 
 ```bash
 docker run -it --rm -v .:/home/swash delftwaves/swash bash
@@ -136,6 +142,30 @@ Once the interactive bash shell is started in the container, the user can access
 Notes:
 - The option `-v .:/home/swash` ensures that the SWASH output files and the PRINT file created in the directory `/home/swash` of the docker container will store in your local current directory.
 - The option `--rm` removes the exited container from your machine after terminating SWASH. (Check by invoking the command `docker ps -a`.)
+
+#### use with Singularity
+
+SWASH can be run on cloud-based HPC clusters (e.g., [Microsoft Azure](https://azure.microsoft.com/en-us) and [Amazon Web Services](https://aws.amazon.com/)) using
+[Singularity](https://sylabs.io/singularity/). Singularity supports Docker images.
+
+You can directly run the docker container in the following way:
+
+```bash
+singularity run --bind .:/home/swash docker://delftwaves/swash swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
+```
+
+A better way is to convert the pulled docker image to singularity format first and then use the singularity image to run SWASH.
+This avoids unnecessary loading of the docker image.
+
+```bash
+singularity pull docker://delftwaves/swash:latest
+```
+
+which pulls the docker image down and subsequently creates a singularity image named `swash_latest.sif`, which can then be run with standard Singularity commands. For example:
+
+```bash
+singularity run --bind .:/home/swash swash_latest.sif swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
+```
 
 ## documentation
 
