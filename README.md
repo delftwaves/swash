@@ -17,6 +17,9 @@ It provides a general framework for describing wave transformations from deep wa
     - [pre-compiled binary packages](#pre-compiled-binary-packages)
     - [installation from source](#installation-from-source)
 - [run instructions](#run-instructions)
+  - [usage of built SWASH](#usage-of-built-swash)
+    - [local copy of SWASH](#local-copy-of-swash)
+    - [from docker image](#from-docker-image)
 - [documentation](#documentation)
 
 ## installation
@@ -89,7 +92,13 @@ Important notes:
 
 ## run instructions
 
-The provided run utilities (`swashrun` and `swashrun.bat`) enable the user to properly and easily run SWASH both serial as well as parallel. 
+The provided run utilities (`swashrun` and `swashrun.bat`) enable the user to properly and easily run SWASH both serial as well as parallel.
+Depending on your choice of installed SWASH (see (#installation-methods)), you can run the simulations via your own built SWASH or via Docker.
+
+### usage of built SWASH
+
+1. [local copy of SWASH](#local-copy-of-swash)
+2. [from docker image](#from-docker-image)
 
 #### local copy of SWASH
 
