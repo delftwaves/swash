@@ -93,7 +93,7 @@ Important notes:
 ## run instructions
 
 The provided run utilities (`swashrun` and `swashrun.bat`) enable the user to properly and easily run SWASH both serial as well as parallel.
-Depending on your choice of installed SWASH (see (#installation-methods)), you can run the simulations via your own built SWASH or via Docker.
+Depending on your choice of [installed SWASH](#installation-methods), you can run the simulations via your own built SWASH or via Docker.
 
 ### usage of built SWASH
 
