@@ -184,7 +184,8 @@ To interactively execute commands within the SWASH container, enter:
 apptainer shell swash_latest.sif
 ```
 
-Consult this [page](https://apptainer.org/docs/user/main/quick_start.html#interacting-with-images) to explore the possibilities with Apptainer.
+Consult this [page](https://apptainer.org/docs/user/main/quick_start.html#overview-of-the-apptainer-interface) to explore the possibilities with Apptainer.
+A final note is that Apptainer is compatible with Singularity, implying that you may use the command `singularity` instead of `apptainer`.
 
 ## documentation
 
