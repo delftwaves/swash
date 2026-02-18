@@ -71,7 +71,7 @@ Important notes:
   distro (e.g., Linux Mint, Rocky Linux) is installed on your machine, or another CPU architecture (e.g., i386/i686, x86_64, AMD64, ARMv7, ARM64).
   If this is the case, then [Docker](#docker-container) might be a good alternative for you.
 - The tarbar files can be extracted in any folder (`tar xzf SWASH-11.01-<OS>.tar.gz` with `OS = Linux` or `macOS`) and has no further installation steps.
-  However, do not forget to add the installed folder to your path. Open a command line terminal and enter
+  However, do not forget to add the installed folder to your path. Open a command line terminal and enter:
 
   ```bash
   export PATH=$PATH:/your/SWASH/folder/
@@ -133,7 +133,7 @@ To run SWASH directly, enter:
 docker run --rm -v .:/home/swash delftwaves/swash swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
 ```
 
-To run the SWASH container interactively, enter:
+To run the SWASH container interactively, copy and paste the following command, and hit Enter:
 
 ```bash
 docker run -it --rm -v .:/home/swash delftwaves/swash bash
