@@ -127,13 +127,13 @@ processors need to be launched for a parallel MPI run. By default, `nprocs = 1`.
 
 The user can either choose between running SWASH directly using docker or the docker in interactive mode (option `-it`).
 
-To run SWASH directly, enter:
+To run SWASH directly, copy and paste the following command, and hit Enter:
 
 ```bash
 docker run --rm -v .:/home/swash delftwaves/swash swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
 ```
 
-To run the SWASH container interactively, copy and paste the following command, and hit Enter:
+To run the SWASH container interactively, enter:
 
 ```bash
 docker run -it --rm -v .:/home/swash delftwaves/swash bash
