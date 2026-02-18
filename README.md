@@ -156,6 +156,7 @@ Once the interactive bash shell is started in the container, the user can access
 Notes:
 - The option `-v .:/home/swash` ensures that the SWASH output files and the PRINT file created in the directory `/home/swash` of the docker container will store in your local current directory.
 - The option `--rm` removes the exited container from your machine after terminating SWASH. (Check by invoking the command `docker ps -a`.)
+- For a complete overview of the command `docker run`, please refer to this [page](https://docs.docker.com/reference/cli/docker/container/run/).
 
 #### use with Apptainer or Singularity
 
@@ -182,6 +183,8 @@ To interactively execute commands within the SWASH container, enter:
 ```bash
 apptainer shell swash_latest.sif
 ```
+
+Consult this [page](https://apptainer.org/docs/user/main/quick_start.html#interacting-with-images) to explore the possibilities with Apptainer.
 
 ## documentation
 
