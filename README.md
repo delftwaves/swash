@@ -121,6 +121,18 @@ while for Linux and Mac users, type in an opened terminal the following command:
 swashrun -input <SWASH-command-file-without-extension>
 ```
 
+Note that the script `swashrun` need to be made executable first, as follows:
+
+```bash
+chmod +rx swashrun
+```
+
+To redirect screen output to a file, use the sign `>`. Use an ampersand to run SWASH in the background. An example:
+
+```bash
+swashrun -input mytest > swashout &
+```
+
 For a parallel MPI run, you must specify the number of processors `<nprocs>` that will be launched, as follows:
 
 ```bat
