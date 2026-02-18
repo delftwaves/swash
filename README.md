@@ -108,26 +108,38 @@ via your own built SWASH or via Docker. Additionally, you can run SWASH on HPC w
 The provided run scripts (`swashrun` and `swashrun.bat`) enable the user to properly and easily run SWASH both serial as well as parallel.
 
 For Windows users, open a terminal (hit the Window key + R, type `cmd` and click OK), navigate to the folder containing your SWASH input files
-(command file, grid, bathymetry, etc.), then copy and paste the following command, and hit Enter:
+(command file, grid, bathymetry, etc.), copy and paste the following command, then replace `<SWASH-command-file-without-extension>`
+by the name of your SWASH command file without extension (assuming it is `sws`), and hit Enter:
 
 ```bat
-swashrun <SWASH-command-file-without-extension> <nprocs>
+swashrun <SWASH-command-file-without-extension>
 ```
 
 while for Linux and Mac users, type in an opened terminal the following command:
 
 ```bash
+swashrun -input <SWASH-command-file-without-extension>
+```
+
+For a parallel MPI run, you must specify the number of processors `<nprocs>` that will be launched, as follows:
+
+```bat
+swashrun <SWASH-command-file-without-extension> <nprocs>
+```
+
+in case of Windows, or
+
+```bash
 swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
 ```
 
-Here, `<SWASH-command-file-without-extension>` is the name of your command file without extension (assuming it is `sws`) and `<nprocs>` indicates how many
-processors need to be launched for a parallel MPI run. By default, `nprocs = 1`.
+in case of Linux/Mac. By default, `nprocs = 1`.
 
 #### from Docker image
 
 The user can either choose between running SWASH directly using docker or the docker in interactive mode (option `-it`).
 
-To run SWASH directly, copy and paste the following command, and hit Enter:
+To run SWASH directly, copy and paste the following command, replace the required run parameters, and hit Enter:
 
 ```bash
 docker run --rm -v .:/home/swash delftwaves/swash swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs>
@@ -162,6 +174,8 @@ This pull creates a singularity image named `swash_latest.sif`, which can then b
 ```bash
 apptainer run --bind .:/home/swash swash_latest.sif swashrun -input <SWASH-command-file-without-extension> -mpi <nprocs> > swashout &
 ```
+
+where `<SWASH-command-file-without-extension>` is the name of your command file without extension and `<nprocs>` indicates how many processors need to be launched for a parallel MPI run.
 
 To interactively execute commands within the SWASH container, enter:
 
